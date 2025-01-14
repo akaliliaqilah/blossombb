@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business Activities and Hours</title>
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+       background-image: url(bunga2.png);
+      background-size: 350px;
+      background-position: center;
+      background-attachment: fixed;
+      color: #5a2f2f;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .title {
+      font-size: 2em;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    .main-activity {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .bubble {
+      width: 45%;
+      background-color: #EFB4B4;
+      color: #FFFFFF;
+      padding: 15px;
+      border-radius: 10px;
+      font-size: 1.2em;
+      text-align: left;
+      opacity: 0;
+      transform: translateX(100%);
+      animation: slide-in-right 1s forwards;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .bubble.left {
+      transform: translateX(-100%);
+      animation: slide-in-left 1s forwards;
+    }
+
+    .bubble p {
+      margin: 10px 0 0;
+      font-size: 0.9em;
+      color: #333;
+    }
+
+    @keyframes slide-in-right {
+      from {
+        opacity: 0;
+        transform: translateX(100%);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slide-in-left {
+      from {
+        opacity: 0;
+        transform: translateX(-100%);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .business-hour {
+      margin-top: 50px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .typewriter {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 1em;
+      color: #555;
+      white-space: nowrap;
+      overflow: hidden;
+      display: inline-block;
+      border-right: 2px solid #555;
+      animation: typing 4s steps(50, end), blink-caret 0.75s step-end infinite;
+    }
+
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+
+    @keyframes blink-caret {
+      from,
+      to {
+        border-color: transparent;
+      }
+      50% {
+        border-color: #555;
+      }
+    }
+
+    table {
+      width: 100%;
+      margin-top: 10px;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: center;
+      border: 1px solid #FFFFFF;
+    }
+
+    th {
+      background-color: #D99393;
+    }
+
+    td {
+      background-color: #EFB4B4;
+    }
+
+    tr:hover td {
+      background-color: #F7C6C6;
+    }
+
+    @media (max-width: 768px) {
+      .bubble {
+        width: 100%;
+      }
+    }
+
+    nav {
+      background-color: #cc7a98;
+      padding: 1rem 0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    nav ul li {
+      margin: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.2rem;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    nav ul li a:hover {
+      background-color: #f3e4a7;
+      color: #333;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="title">Business Activities</div>
+    <h2> MAIN ACTIVITY</h2>
+
+    <nav>
+      <ul>
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="ourproducts.html">Our Products</a></li>
+        <li><a href="Our outlet.html">Outlets</a></li>
+        <li><a href="Business activities.html">Business Activities</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <div class="main-activity">
+      <div class="bubble">
+        <strong>Marketing Activity</strong>
+        <p>• Utilizing social media platforms for promotions and customer engagement.</p>
+        <p>• Implementing targeted advertising campaigns to reach potential customers.</p>
+        <p>• Collaborating with influencers to increase brand visibility.</p>
+      </div>
+
+      <div class="bubble left">
+        <strong>Sales Activity</strong>
+        <p>• Offering online sales through an e-commerce platform to expand reach.</p>
+        <p>• Providing customer service and support to enhance the shopping experience.</p>
+        <p>• Operating a physical store in a strategic location for direct customer sales.</p>
+      </div>
+
+      <div class="bubble">
+        <strong>Packaging Activity</strong>
+        <p>• Designing attractive and functional packaging that reflects the brand's identity.</p>
+        <p>• Ensuring that packaging is eco-friendly and appealing to customers.</p>
+        <p>• Including branding elements in packaging to enhance recognition.</p>
+      </div>
+
+      <div class="bubble left">
+        <strong>Customer Feedback & Engagement</strong>
+        <p>• Collecting and analyzing customer feedback to improve products and services.</p>
+        <p>• Engaging with customers through surveys and social media interactions.</p>
+      </div>
+    </div>
+
+    <div class="business-hour">
+      <h2>BUSINESS HOUR</h2>
+      <div class="typewriter">
+        ➢ 12 hours per-day<br>
+        ➢ Tuesday – Sunday (10AM - 10PM)<br>
+        ➢ Public Holiday (Closed)<br>
+        ➢ Monday (closed)
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Open</th>
+            <th>Close</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Monday</td>
+            <td>CLOSED</td>
+            <td>CLOSED</td>
+          </tr>
+          <tr>
+            <td>Tuesday</td>
+            <td>10:00AM</td>
+            <td>10:00PM</td>
+          </tr>
+          <tr>
+            <td>Wednesday</td>
+            <td>10:00AM</td>
+            <td>10:00PM</td>
+          </tr>
+          <tr>
+            <td>Thursday</td>
+            <td>10:00AM</td>
+            <td>10:00PM</td>
+          </tr>
+          <tr>
+            <td>Friday</td>
+            <td>10:00AM</td>
+            <td>10:00PM</td>
+          </tr>
+          <tr>
+            <td>Saturday</td>
+            <td>10:00AM</td>
+            <td>10:00PM</td>
+          </tr>
+          <tr>
+            <td>Sunday</td>
+            <td>CLOSED</td>
+            <td>CLOSED</td>
+          </tr>
+        </tbody>
+      </table

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Outlets</title>
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url(bunga1.jpg);
+      background-size: cover;
+      background-attachment: fixed;
+      color: #553030;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+    }
+
+    .title {
+      font-size: 2em;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    .outlet {
+      background-color: #D99393;
+      color: white;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 15px 0;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .outlet:hover {
+      background-color: #C47474;
+    }
+
+    /* Pop-up Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 500px;
+      width: 90%;
+      text-align: center;
+      position: relative;
+    }
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 24px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: #D99393;
+      transition: transform 0.3s ease;
+    }
+
+    .close:hover {
+      transform: scale(1.2);
+    }
+
+    .map-image {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    nav {
+  background-color: #cc7a98;
+  padding: 0.8rem 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  position: sticky; 
+  top: 0;
+  z-index: 1000; 
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px; 
+  flex-wrap: wrap; 
+}
+
+nav ul li {
+  margin: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #f3e4a7;
+  color: #333;
+  transform: scale(1.05); /* Adds a slight zoom effect on hover */
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column; /* Stacks the items vertically on small screens */
+    gap: 10px; /* Adjust the gap for smaller screens */
+  }
+
+  nav ul li a {
+    font-size: 1rem; /* Adjusts font size for smaller screens */
+  }
+}
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <nav>
+      <ul>
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="ourproducts.html">Our Products</a></li>
+        <li><a href="Our outlet.html">Outlets</a></li>
+        <li><a href="Business activities.html">Business Activities</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+      </ul>
+    </nav>
+
+
+
+  <div class="container">
+    <div class="title">OUR OUTLETS</div>
+    <div class="outlet" onclick="showMap('maps2.jpg')">
+      <b><i>Boutique Kota Bharu, Kelantan</i></b><br>
+      <p>Address: Blossom company, PT 499 Corner Lot, Jalan No. 4/1 Bangunan Komersial, Lembah Sireh, 15050, Kota Bharu, Kelantan.</p>
+      <p>Customer Service: +60 11-15453994</p>
+    </div>
+    <div class="outlet" onclick="showMap('maps2.jpg')">
+      <b><i>Boutique HQ Bachok, Kelantan</i></b><br>
+      <p>Address: Blossom company, LOT 319 Batu 19, Jalan Pantai Baru 16300, Bachok, Kelantan</p>
+      <p>Customer Service: +60 10-14321287</p>
+      <p>Boutique Number: +60 11-67845523</p>
+    </div>
+    <div class="outlet" onclick="showMap('maps3.jpg')">
+      <b><i>Boutique Four Season, Pasir Tumboh, Kelantan</i></b><br>
+      <p>Address: Blossom company, PT 532 Lorong Sungai, Jalan Pondok 16800 Pasir Tumboh, Kelantan</p>
+      <p>Customer Service: +60 10-87450097</p>
+      <p>Boutique Number: +60 11-22547687</p>
+    </div>
+  </div>
+
+  <!-- Modal for Map -->
+  <div class="modal" id="mapModal">
+    <div class="modal-content">
+      <button class="close" onclick="closeModal()">🌸</button>
+      <img id="mapImage" class="map-image" src="" alt="Outlet Map">
+    </div>
+  </div>
+
+  <script>
+    function showMap(imageSrc) {
+      document.getElementById('mapImage').src = imageSrc;
+      document.getElementById('mapModal').style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('mapModal').style.display = 'none';
+      document.getElementById('mapImage').src = ''; // Clear image source when closed
+    }
+  </script>
+</body>
+
+</html>
+
+

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Products</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url(bunga2.png);
+      background-size: 350px;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    /* Products Section Styles */
+    .products {
+      padding: 60px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .products-content {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 40px;
+      border-radius: 20px;
+      width: 100%;
+      max-width: 1200px;
+      box-sizing: border-box;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .products h2 {
+      font-size: 32px;
+      margin-bottom: 30px;
+      color: #6c3145;
+      text-align: center;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-gap: 20px;
+    }
+
+    .product-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: scale(1.05);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: auto; /* Changed to auto for aspect ratio */
+      object-fit: cover; /* Maintains aspect ratio while covering the area */
+    }
+
+    .new-arrival {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #FF0000;
+      color: #fff;
+      padding: 5px 10px;
+      font-size: 14px;
+      border-radius: 5px;
+    }
+
+    @media (max-width: 680px) { /* Corrected the max-width value */
+      .products {
+        padding: 40px 20px;
+      }
+
+      .products-content {
+        padding: 30px;
+      }
+
+      .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-gap: 20px;
+      }
+
+      .product-card img {
+        height: auto; /* Ensures images are responsive */
+      }
+    }
+
+    nav {
+        background-color: #cc7a98;
+        padding: 0.5rem 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.2rem;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+    }
+
+    nav ul li a:hover {
+        background-color: #af8dab;
+        color: #333;
+    }
+
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="products">
+
+    <nav>
+      <ul>
+          <li><a href="homepage.html">Home</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="ourproducts.html">Our Products</a></li>
+          <li><a href="Our outlet.html">Outlets</a></li>
+          <li><a href="Business activities.html">Business Activities</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  
+    <div class="products-content">
+      <h2>OUR PRODUCTS</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="daisyluxe.jpg" alt="Daisyluxe">
+          <div class="new-arrival">NEW ARRIVAL</div>
+        </div>
+        <div class="product-card">
+          <img src="floralfusion.jpg" alt="Floralfusion">
+        </div>
+        <div class="product-card">
+          <img src="gardenglow.jpg" alt="Gardenglow">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
